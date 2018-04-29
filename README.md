@@ -6,9 +6,9 @@ taking jobs from a queue.
 * Create a functor, (class) which implements the () operator, that takes exactly one parameter of any type
 * Fill up a queue of the type that the functor takes as parameter
 * instantiate a concurrent::PARALLEL object with template parameters of the functor and its respective parameter type
- the constructor takes two parameters:
- 1.a functor instantiation
- 2.the job queue
+* the constructor takes two parameters:
+ 1. a functor instantiation
+ 2. the job queue
 
 
 # Example: concurrently calculate sum of matrix

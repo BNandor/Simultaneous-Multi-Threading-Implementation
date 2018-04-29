@@ -20,7 +20,7 @@ taking jobs from a queue.
 
 ![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/functor.png)
 
-![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/sorbatesz.png)
+![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/sorbateszq.png)
 
 ![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/eredmeny.png)
 

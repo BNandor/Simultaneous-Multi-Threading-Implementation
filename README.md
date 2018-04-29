@@ -18,9 +18,9 @@ taking jobs from a queue.
 
 ![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/parameter.png)
 
-![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/functor.png)
+![functor  ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/functor.png)
 
-![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/sorbateszq.png)
+![enqueue ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/sorbateszq.png)
 
-![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/eredmeny.png)
+![sum ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/eredmeny.png)
 

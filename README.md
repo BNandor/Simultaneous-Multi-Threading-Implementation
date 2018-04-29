@@ -15,4 +15,11 @@ taking jobs from a queue.
 
 ![Fill up the matrix ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/feltolt.png)
 
-![Fill up the matrix ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/parameter.png)
+![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/parameter.png)
+
+![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/functor.png)
+
+![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/sorbatesz.png)
+
+![functor parameter ](https://raw.githubusercontent.com/BNandor/Simultaneous-Multi-Threading-Implementation/master/img/eredmeny.png)
+

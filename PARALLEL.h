@@ -1,11 +1,11 @@
 #ifndef _PARALLEL_H_
 #define _PARALLEL_H_
 
-#include <thread>
 #include <iostream>
-
+#include <thread>
+#include <queue>
 #include <future>
-#include "my_datastructures.h"
+//#include "my_datastructures.h"
 
 namespace concurrent{
 
@@ -17,13 +17,13 @@ namespace concurrent{
 		private:
 			
 			std::mutex next_mutex;
-			SOR<job> *whole_batch;
+			std::queue<job> *whole_batch;
 
 		public:
 			
 
 			Project():whole_batch(nullptr){}
-			Project(SOR<job>& batch):whole_batch(&batch){
+			Project(std::queue<job>& batch):whole_batch(&batch){
 			}
 			job* next_job(){
 				std::lock_guard<std::mutex> lockGuard(next_mutex);
@@ -31,7 +31,8 @@ namespace concurrent{
 				if(whole_batch->size() > 0){
 
 					job* next = new job;
-					*next = whole_batch->pop();
+					*next =whole_batch->front();
+					whole_batch->pop();
 					return next;
 				}else{
 					return nullptr;
@@ -76,7 +77,7 @@ namespace concurrent{
 		int NUM_THREADS;
 		public:	
 		
-		PARALLEL(const Func& func,SOR<job>& jobs,int NUM_THREADS):NUM_THREADS(NUM_THREADS){
+		PARALLEL(const Func& func,std::queue<job>& jobs,int NUM_THREADS):NUM_THREADS(NUM_THREADS){
 			
 			if(NUM_THREADS <= 0){throw "unsupported thread number";}
 			workload=new Project(jobs);
@@ -124,13 +125,13 @@ namespace concurrent{
 	template<class T>
 	class Output{
 	private:
-		SOR<T>* out;
+		std::queue<T>* out;
 		std::mutex shared_mutex;
 	public:
 
 		Output(){
 
-			out = new SOR<T>;
+			out = new std::queue<T>;
 
 		}
 
@@ -150,7 +151,10 @@ namespace concurrent{
 			
 			std::lock_guard<std::mutex> lockGuard(shared_mutex);
 			try{
-				return out->pop();
+				T temp;
+				temp = out->front();
+				out->pop();
+				return temp;
 			}catch(const char* exc){
 				std::cout<<exc;
 				throw;
